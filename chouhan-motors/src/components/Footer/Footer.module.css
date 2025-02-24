@@ -1,0 +1,8 @@
+.footer {
+  width: 100%;
+  background-color: red; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  padding: 1rem 2rem;
+  text-align: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}

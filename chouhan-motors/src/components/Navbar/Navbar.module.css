@@ -1,0 +1,43 @@
+.navbar {
+  width: 100%;
+  background-color: red; /* Set the background color to red */
+  color: white; /* Set the text color to white */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  max-height: 70px; /* Increase the maximum height for the logo image */
+  width: auto;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navLinks li {
+  margin: 0;
+}
+
+.navLinks a {
+  color: white; /* Set the link color to white */
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
+  color: darkred; /* Set the hover color to a darker red */
+}

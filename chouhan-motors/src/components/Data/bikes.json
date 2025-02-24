@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Xtreme 250r",
+    "description": "Challenge the extreme",
+    "image": "/assets/xtreme_250r.png",
+    "category": "Motorcycles",
+    "subcategory": "100cc"
+  },
+  {
+    "id": 2,
+    "name": "Hero HF Deluxe",
+    "description": "A budget-friendly commuter bike.",
+    "image": "/assets/hf_deluxe.jpg",
+    "category": "Motorcycles",
+    "subcategory": "100cc"
+  },
+  {
+    "id": 3,
+    "name": "Hero Glamour",
+    "description": "A stylish and powerful bike.",
+    "image": "/assets/glamour.jpg",
+    "category": "Motorcycles",
+    "subcategory": "125cc"
+  },
+  {
+    "id": 4,
+    "name": "Hero Super Splendor",
+    "description": "A powerful and comfortable bike.",
+    "image": "/assets/super_splendor.jpg",
+    "category": "Motorcycles",
+    "subcategory": "125cc"
+  },
+  {
+    "id": 5,
+    "name": "Hero Xtreme 160R",
+    "description": "A sporty and aggressive bike.",
+    "price": "₹1,03,900",
+    "image": "/assets/xtreme_160r.jpg",
+    "category": "Premium"
+  },
+  {
+    "id": 6,
+    "name": "Hero Xpulse 200",
+    "description": "An adventure bike for off-road enthusiasts.",
+    "price": "₹1,20,800",
+    "image": "/assets/xpulse_200.jpg",
+    "category": "Premium"
+  },
+  {
+    "id": 7,
+    "name": "Hero Maestro Edge 125",
+    "description": "A stylish and powerful scooter.",
+    "price": "₹72,250",
+    "image": "/assets/maestro_edge_125.jpg",
+    "category": "Scooters"
+  },
+  {
+    "id": 8,
+    "name": "Hero Pleasure Plus",
+    "description": "A lightweight and easy-to-handle scooter.",
+    "price": "₹60,500",
+    "image": "/assets/pleasure_plus.jpg",
+    "category": "Scooters"
+  },
+  {
+    "id": 9,
+    "name": "Hero Electric Optima",
+    "description": "An eco-friendly electric scooter.",
+    "price": "₹67,440",
+    "image": "/assets/electric_optima.jpg",
+    "category": "Upcoming Launches"
+  },
+  {
+    "id": 10,
+    "name": "Hero Electric Photon",
+    "description": "A high-performance electric scooter.",
+    "price": "₹74,240",
+    "image": "/assets/electric_photon.jpg",
+    "category": "Upcoming Launches"
+  }
+]
