@@ -3,17 +3,25 @@ import Button from "../Button/Button";
 
 const BikeCard = ({ bike, onViewDetails }) => {
   return (
-    <div className="border border-gray-300 rounded-lg overflow-hidden w-80 bg-white shadow-md transition-transform transform hover:-translate-y-2 hover:shadow-lg h-full flex flex-col">
-      <img src={bike.image} alt={bike.name} className="w-full h-48 object-cover" />
-      <div className="p-4 text-center flex flex-col flex-grow justify-between">
-        <div className="flex-grow min-h-[120px]">
-          <h3 className="text-xl font-semibold text-gray-800">{bike.name}</h3>
-          <p className="text-gray-600 mt-2">{bike.description}</p>
-          <p className="text-lg font-bold text-red-600 mt-2">Price: {bike.price}</p>
-        </div>
-        <div className="mt-4">
+    <div className="border border-gray-200 rounded-lg overflow-hidden w-80 bg-white shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-2 flex flex-col">
+      
+      {/* Bike Image */}
+      <div className="relative">
+        <img src={bike.image} alt={bike.name} className="w-full h-52 object-contain p-4" />
+      </div>
+
+      {/* Bike Details */}
+      <div className="p-5 text-center flex flex-col flex-grow">
+
+        {/* Bike Name */}
+        <h3 className="text-gray-600 text-xl font-semibold italic uppercase">
+          {bike.name}
+        </h3>
+
+        {/* View Details Button */}
+        <div className="mt-5">
           <Button 
-            className="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition"
+            className="bg-red-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-red-700 transition w-full"
             onClick={onViewDetails}
           >
             View Details
@@ -29,8 +37,8 @@ BikeCard.propTypes = {
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
+    cc: PropTypes.string.isRequired,
+    torque: PropTypes.string.isRequired,
   }).isRequired,
   onViewDetails: PropTypes.func.isRequired,
 };

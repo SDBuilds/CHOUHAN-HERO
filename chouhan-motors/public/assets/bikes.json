@@ -29,7 +29,7 @@
   {
     "id": 4,
     "name": "Mavrick 440",
-    "image": "/assets/Mavrick.png",
+    "image": "/assets/mavrick_440.png",
     "category": "Premium",
     "subcategory": "Premium",
     "cc": "440 cc",
@@ -38,7 +38,7 @@
   {
     "id": 5,
     "name": "Karizma XMR",
-    "image": "/assets/Karizma_xmr.png",
+    "image": "/assets/karizma_xmr.png",
     "category": "Premium",
     "subcategory": "Premium",
     "cc": "210 cc",
@@ -47,7 +47,7 @@
   {
     "id": 6,
     "name": "Harley Davidson X440",
-    "image": "/assets/Harleyx440bike-.png",
+    "image": "/assets/harley_davidson_x440.png",
     "category": "Premium",
     "subcategory": "Premium",
     "cc": "440 cc",
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "name": "Xpulse 200 4V",
-    "image": "/assets/xpulse-200-4v.png",
+    "image": "/assets/xpulse_200_4v.png",
     "category": "Premium",
     "subcategory": "Premium",
     "cc": "199.6 cc",
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "name": "Passion+",
-    "image": "/assets/passion-plus.png",
+    "image": "/assets/passion_plus.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -83,7 +83,7 @@
   {
     "id": 10,
     "name": "Splendor+ XTEC 2.0",
-    "image": "/assets/splendorplus_xtec_2.0.png",
+    "image": "/assets/splendor_xtec_2.0.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -92,7 +92,7 @@
   {
     "id": 11,
     "name": "Splendor+",
-    "image": "/assets/splendor-plus.png",
+    "image": "/assets/splendor_plus.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -101,7 +101,7 @@
   {
     "id": 12,
     "name": "Splendor+ XTEC",
-    "image": "/assets/splendor-plus-xtec.png",
+    "image": "/assets/splendor_xtec.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -110,7 +110,7 @@
   {
     "id": 13,
     "name": "HF Deluxe",
-    "image": "/assets/hf-deluxe.png",
+    "image": "/assets/hf_deluxe.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -119,7 +119,7 @@
   {
     "id": 14,
     "name": "HF 100",
-    "image": "/assets/hf-100.png",
+    "image": "/assets/hf_100.png",
     "category": "Motorcycles",
     "subcategory": "100cc",
     "cc": "97.2 cc",
@@ -128,7 +128,7 @@
   {
     "id": 15,
     "name": "Xtreme 125R",
-    "image": "/assets/xtreme-125r.png",
+    "image": "/assets/xtreme_125r.png",
     "category": "Motorcycles",
     "subcategory": "125cc",
     "cc": "125 cc",
@@ -146,7 +146,7 @@
   {
     "id": 17,
     "name": "Super Splendor XTEC",
-    "image": "/assets/super-splendor-xtec.png",
+    "image": "/assets/super_splendor_xtec.png",
     "category": "Motorcycles",
     "subcategory": "125cc",
     "cc": "124.7 cc",
@@ -155,7 +155,7 @@
   {
     "id": 18,
     "name": "Glamour XTEC",
-    "image": "/assets/glamour-xtec.png",
+    "image": "/assets/glamour_xtec.png",
     "category": "Motorcycles",
     "subcategory": "125cc",
     "cc": "124.7 cc",
@@ -164,7 +164,7 @@
   {
     "id": 19,
     "name": "Super Splendor",
-    "image": "/assets/super-splendor.png",
+    "image": "/assets/super_splendor.png",
     "category": "Motorcycles",
     "subcategory": "125cc",
     "cc": "124.7 cc",
@@ -191,7 +191,7 @@
   {
     "id": 22,
     "name": "New Destini 125",
-    "image": "/assets/destini_125_zx+.svg",
+    "image": "/assets/new_destini_125.png",
     "category": "Scooters",
     "subcategory": "Scooters",
     "cc": "125 cc",
@@ -200,7 +200,7 @@
   {
     "id": 23,
     "name": "Destini Prime",
-    "image": "/assets/destini-prime.png",
+    "image": "/assets/destini_prime.png",
     "category": "Scooters",
     "subcategory": "Scooters",
     "cc": "124.6 cc",
@@ -218,7 +218,7 @@
   {
     "id": 25,
     "name": "Pleasure+ XTEC",
-    "image": "/assets/pleasure-plus-xtec.png",
+    "image": "/assets/pleasure_xtec.png",
     "category": "Scooters",
     "subcategory": "Scooters",
     "cc": "110.9 cc",

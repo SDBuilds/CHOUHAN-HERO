@@ -1,7 +1,9 @@
-import aboutImage from "../../assets/about_us.jpg";
+import { useNavigate } from "react-router-dom";
 import Button from "../UI/Button/Button";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="flex flex-col min-h-screen">
       <div className="container mx-auto px-4 py-12 mt-24 max-w-7xl flex-grow flex flex-col lg:flex-row items-center gap-10 bg-gray-100 rounded-lg shadow-md">
@@ -40,21 +42,19 @@ const AboutUs = () => {
 
           {/* Contact Us Button */}
           <div className="mt-8 flex justify-center lg:justify-start">
-            <Button onClick={() => window.location.href = "/contact"}>Contact Us</Button>
+            <Button onClick={() => navigate("/contact")}>Contact Us</Button>
           </div>
         </div>
         
         {/* Image Section */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src={aboutImage}
+            src="/assets/about_us.jpg" // ✅ Fixed Image Path
             alt="About Chouhan Motors"
             className="rounded-lg shadow-lg w-full max-w-md transform hover:scale-105 transition duration-300"
           />
         </div>
       </div>
-      {/* Footer Stays at the Bottom */}
-      
     </div>
   );
 };

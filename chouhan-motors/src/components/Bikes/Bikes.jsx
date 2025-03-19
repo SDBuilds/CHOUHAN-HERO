@@ -1,24 +1,43 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import BikeCard from "../UI/BikeCard/BikeCard";
 import BikeDetail from "../BikeDetail/BikeDetail";
 import bikesData from "../Data/bikes.json";
 
 const Bikes = () => {
   const { category, subcategory } = useParams();
+  const navigate = useNavigate();
   const [bikes, setBikes] = useState([]);
   const [selectedBike, setSelectedBike] = useState(null);
   const [result, setResult] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Function to navigate to subcategory
+  const handleSubcategoryChange = (sub) => {
+    navigate(`/category/${category}/${sub.toLowerCase()}`);
+  };
+
   useEffect(() => {
-    if (category === "all") {
-      setBikes(bikesData);
-    } else if (category) {
-      setBikes(bikesData.filter((bike) => bike.category === category && (!subcategory || bike.subcategory === subcategory)));
-    } else {
-      setBikes(bikesData);
+    let filteredBikes = bikesData;
+  
+    if (category && category !== "all") {
+      filteredBikes = filteredBikes.filter((bike) => bike.category.toLowerCase() === category.toLowerCase());
     }
+  
+    if (subcategory) {
+      if (subcategory.toLowerCase() === "premium") {
+        // Include bikes from both "category": "Premium" and "subcategory": "Premium"
+        filteredBikes = bikesData.filter(
+          (bike) =>
+            bike.category.toLowerCase() === "premium" || bike.subcategory?.toLowerCase() === "premium"
+        );
+      } else {
+        // Regular filtering for other subcategories
+        filteredBikes = filteredBikes.filter((bike) => bike.subcategory?.toLowerCase() === subcategory.toLowerCase());
+      }
+    }
+  
+    setBikes(filteredBikes);
   }, [category, subcategory]);
 
   const handleSubmit = async (e) => {
@@ -47,6 +66,33 @@ const Bikes = () => {
 
   return (
     <div className="flex flex-col items-center gap-6 p-8">
+      
+      {/* Subcategory Filter Buttons */}
+      {category === "motorcycles" && (
+        <div className="flex gap-4 mb-6">
+          <button 
+            onClick={() => handleSubcategoryChange("100CC")} 
+            className={`px-4 py-2 rounded-md ${subcategory === "100cc" ? "bg-red-600 text-white" : "bg-gray-300"}`}
+          >
+            100CC
+          </button>
+          <button 
+            onClick={() => handleSubcategoryChange("125CC")} 
+            className={`px-4 py-2 rounded-md ${subcategory === "125cc" ? "bg-red-600 text-white" : "bg-gray-300"}`}
+          >
+            125CC
+          </button>
+          <button 
+            onClick={() => handleSubcategoryChange("Premium")} 
+            className={`px-4 py-2 rounded-md ${subcategory === "premium" ? "bg-red-600 text-white" : "bg-gray-300"}`}
+          >
+            Premium
+          </button>
+        </div>
+      )}
+      
+
+      {/* Display Bike Cards */}
       <div className="flex flex-wrap justify-center gap-6">
         {bikes.map((bike) => (
           <BikeCard key={bike.id} bike={bike} onViewDetails={() => setSelectedBike(bike)} />
@@ -54,8 +100,6 @@ const Bikes = () => {
       </div>
 
       {selectedBike && <BikeDetail bike={selectedBike} onClose={() => setSelectedBike(null)} />}
-
-      {/* Always-Visible Test Drive Form */}
       <div className="mt-8 w-full max-w-4xl bg-gray-100 p-8 rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold text-center mb-6">Schedule Your Test Drive</h2>
         <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-6">
@@ -87,6 +131,7 @@ const Bikes = () => {
         {result && <p className="text-center text-green-600 mt-4 font-medium">{result}</p>}
       </div>
     </div>
+    
   );
 };
 

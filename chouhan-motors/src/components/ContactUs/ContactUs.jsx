@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { useSearchParams } from "react-router-dom";
-import backgroundImage from "../../assets/about_us.jpg";
 import Button from "../UI/Button/Button";
 import { motion } from "framer-motion";
 
@@ -34,15 +33,17 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center bg-cover bg-center px-6 py-12 relative"
-      style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div
+      className="min-h-screen flex flex-col items-center bg-cover bg-center px-6 py-12 relative"
+      style={{ backgroundImage: `url('/assets/about_us.jpg')` }} // ✅ Fixed Image Path
+    >
       <div className="absolute inset-0 bg-gradient-to-b from-white/80 to-white/90"></div>
-      
+
       <h1 className="text-5xl font-extrabold text-red-700 mb-8 text-center relative drop-shadow-lg">
         Contact <span className="text-black">Chouhan Motors</span>
       </h1>
 
-      <motion.div 
+      <motion.div
         className="w-full max-w-2xl bg-white p-6 shadow-xl rounded-xl border-t-4 border-red-700 text-center relative cursor-pointer mb-12"
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setTimeout(() => setHovered(false), 5000)}
@@ -52,9 +53,15 @@ const ContactUs = () => {
         <h2 className="text-4xl font-bold text-red-700 mb-3 animate-pulse">📞 CALL NOW</h2>
         <p className="text-xl font-semibold text-black">Sales: +91-9876543210</p>
         <p className="text-xl font-semibold text-black">Service: +91-8765432109</p>
-        <p className="text-lg font-medium mt-3 text-gray-700">Sales: <span className="text-red-700">10AM - 7PM (Mon-Sat)</span></p>
-        <p className="text-lg font-medium text-gray-700">Service: <span className="text-red-700">9AM - 6PM (Mon-Sun)</span></p>
-        <p className="text-sm text-gray-600 mt-2">Please call between working hours for the best customer experience.</p>
+        <p className="text-lg font-medium mt-3 text-gray-700">
+          Sales: <span className="text-red-700">10AM - 7PM (Mon-Sat)</span>
+        </p>
+        <p className="text-lg font-medium text-gray-700">
+          Service: <span className="text-red-700">9AM - 6PM (Mon-Sun)</span>
+        </p>
+        <p className="text-sm text-gray-600 mt-2">
+          Please call between working hours for the best customer experience.
+        </p>
       </motion.div>
 
       <div className="w-full max-w-4xl mb-12 relative">
@@ -75,27 +82,42 @@ const ContactUs = () => {
         <p className="text-lg font-semibold">📞 Phone: +91-8305694280</p>
         <p className="text-lg font-semibold">✉️ Email: info@chouhanmotors.com</p>
       </div>
-      
+
       <div className="w-full max-w-2xl bg-white p-8 shadow-xl rounded-xl border-t-4 border-red-700 relative mt-8">
         <h2 className="text-3xl font-semibold text-center text-black mb-6">Request a Callback</h2>
         <form onSubmit={onSubmit} className="space-y-4">
           <div>
             <label className="block text-gray-800 font-semibold">Name</label>
-            <input type="text" name="name" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600" />
+            <input
+              type="text"
+              name="name"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"
+            />
           </div>
           <div>
             <label className="block text-gray-800 font-semibold">Contact No</label>
-            <input type="tel" name="phone" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600" />
+            <input
+              type="tel"
+              name="phone"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"
+            />
           </div>
           <div>
             <label className="block text-gray-800 font-semibold">Email</label>
-            <input type="email" name="email" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600" />
+            <input
+              type="email"
+              name="email"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"
+            />
           </div>
           <div>
             <label className="block text-gray-800 font-semibold">Department</label>
-            <select 
-              name="department" 
-              required 
+            <select
+              name="department"
+              required
               className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"
               defaultValue={preSelectedDepartment}
             >
@@ -109,7 +131,12 @@ const ContactUs = () => {
           </div>
           <div>
             <label className="block text-gray-800 font-semibold">Your Message</label>
-            <textarea name="message" rows="4" required className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"></textarea>
+            <textarea
+              name="message"
+              rows="4"
+              required
+              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-red-600"
+            ></textarea>
           </div>
           <div className="text-center">
             <Button type="submit">Submit</Button>

@@ -7,15 +7,15 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left space-y-4 md:space-y-0 md:space-x-8">
         <p className="flex items-center">
           <FontAwesomeIcon icon={faMapMarkerAlt} className="mr-2" />
-          123 Hero Street, Motor City, IN 12345
+          Durg-Bypass, Beside True Value, Bhilai (C.G)
         </p>
         <p className="flex items-center">
           <FontAwesomeIcon icon={faPhone} className="mr-2" />
-          Sales: +1 (123) 456-7890
+          Sales: +91-9876543210
         </p>
         <p className="flex items-center">
           <FontAwesomeIcon icon={faPhone} className="mr-2" />
-          Service: +1 (123) 456-7891
+          Service: +91-8765432109
         </p>
         <p className="flex items-center">
           <FontAwesomeIcon icon={faEnvelope} className="mr-2" />

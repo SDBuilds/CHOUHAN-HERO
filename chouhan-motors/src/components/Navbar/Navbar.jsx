@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
-import logo from "../../assets/Motors.png";
 
 const Navbar = () => {
   const [isInventoryOpen, setIsInventoryOpen] = useState(false);
@@ -16,7 +15,7 @@ const Navbar = () => {
   };
 
   const handleMouseLeave = (setDropdown) => {
-    inventoryTimeout = setTimeout(() => setDropdown(false), 200); // Small delay before closing
+    inventoryTimeout = setTimeout(() => setDropdown(false), 200);
   };
 
   useEffect(() => {
@@ -31,7 +30,11 @@ const Navbar = () => {
       <nav className="bg-gradient-to-r from-red-700 via-red-600 to-red-500 text-white py-4 shadow-lg fixed top-0 w-full z-50">
         <div className="w-full flex justify-between items-center px-6 relative">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Logo" className="h-16 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-2" />
+            <img
+              src="/assets/Motors.png" // ✅ Fixed Image Path
+              alt="Logo"
+              className="h-16 w-auto object-contain transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-2"
+            />
           </Link>
 
           <div className="md:hidden">
@@ -50,13 +53,30 @@ const Navbar = () => {
               onMouseEnter={() => handleMouseEnter(setIsInventoryOpen)}
               onMouseLeave={() => handleMouseLeave(setIsInventoryOpen)}
             >
-              <Link to="/category/all" className="text-gray-200 hover:text-gray-400">INVENTORY</Link>
+              <Link to="/category/motorcycles" className="text-gray-200 hover:text-gray-400">INVENTORY</Link>
               {isInventoryOpen && (
                 <ul className="absolute left-0 mt-2 w-48 bg-white text-gray-900 rounded-lg shadow-lg overflow-hidden">
-                  <li><Link to="/category/bikes" className="block px-4 py-2 hover:bg-gray-200">Bikes</Link></li>
-                  <li><Link to="/category/scooters" className="block px-4 py-2 hover:bg-gray-200">Scooters</Link></li>
-                  <li><Link to="/category/electric" className="block px-4 py-2 hover:bg-gray-200">Electric</Link></li>
-                </ul>
+                <li>
+                  <Link to="/category/motorcycles" className="block px-4 py-2 hover:bg-gray-200">
+                    Bikes
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/category/scooters" className="block px-4 py-2 hover:bg-gray-200">
+                    Scooters
+                  </Link>
+                </li>
+                <li>
+                  <a 
+                    href="https://vidaworld.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="block px-4 py-2 hover:bg-gray-200"
+                  >
+                    Electric
+                  </a>
+                </li>
+              </ul>
               )}
             </li>
 
