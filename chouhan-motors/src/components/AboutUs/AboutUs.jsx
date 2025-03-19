@@ -49,7 +49,7 @@ const AboutUs = () => {
         {/* Image Section */}
         <div className="lg:w-1/2 flex justify-center">
           <img
-            src="/assets/about_us.jpg" // ✅ Fixed Image Path
+            src="/assets/about_us.JPG" 
             alt="About Chouhan Motors"
             className="rounded-lg shadow-lg w-full max-w-md transform hover:scale-105 transition duration-300"
           />

@@ -35,6 +35,11 @@ const App = () => {
                   <div className="my-8">
                     <CategoryList />
                   </div>
+
+                  {/* About Us Section */}
+                  <div className="my-12">
+                    <AboutUs />
+                  </div>
                 </div>
               }
             />

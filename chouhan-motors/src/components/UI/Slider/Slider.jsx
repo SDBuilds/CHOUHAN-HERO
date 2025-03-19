@@ -24,10 +24,19 @@ function Slider() {
                     <img src="/Showroom.jpeg" alt="Showroom" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/VidaCatCard.webp" alt="Vida" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
+                    <img src="/assets/Showroom1.JPG" alt="Vida" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="/Xtreme250RCatCard.jpg" alt="Xtreme 250R" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
+                    <img src="/assets/Showroom2.JPG" alt="Xtreme 250R" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/assets/Showroom3.JPG" alt="Xtreme 250R" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/assets/Showroom4.JPG" alt="Xtreme 250R" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="/assets/Showroom5.JPG" alt="Xtreme 250R" className="w-full h-full object-cover rounded-xl transition-opacity duration-700 ease-in-out opacity-100" />
                 </SwiperSlide>
             </Swiper>
         </div>
